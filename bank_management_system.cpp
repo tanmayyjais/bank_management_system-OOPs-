@@ -1,17 +1,8 @@
-//***************************************************************
-//                   HEADER FILE USED IN PROJECT
-//****************************************************************
-
 #include<iostream>
 #include<fstream>
 #include<cctype>
 #include<iomanip>
 using namespace std;
-
-//***************************************************************
-//                   CLASS USED IN PROJECT
-//****************************************************************
-
 
 class account
 {
@@ -101,10 +92,6 @@ char account::rettype() const
 	return type;
 }
 
-
-//***************************************************************
-//    	function declaration
-//****************************************************************
 void write_account();	//function to write record in binary file
 void display_sp(int);	//function to display account details given by user
 void modify_account(int);	//function to modify record of file
@@ -112,11 +99,6 @@ void delete_account(int);	//function to delete record of file
 void display_all();		//function to display all account details
 void deposit_withdraw(int, int); // function to desposit/withdraw amount for given account
 void intro();	//introductory screen function
-
-//***************************************************************
-//    	THE MAIN FUNCTION OF PROGRAM
-//****************************************************************
-
 
 int main()
 {
@@ -177,11 +159,6 @@ int main()
 	return 0;
 }
 
-
-//***************************************************************
-//    	function to write in file
-//****************************************************************
-
 void write_account()
 {
 	account ac;
@@ -191,10 +168,6 @@ void write_account()
 	outFile.write(reinterpret_cast<char *> (&ac), sizeof(account));
 	outFile.close();
 }
-
-//***************************************************************
-//    	function to read specific record from file
-//****************************************************************
 
 void display_sp(int n)
 {
@@ -221,11 +194,6 @@ void display_sp(int n)
 	if(flag==false)
 		cout<<"\n\nAccount number does not exist";
 }
-
-
-//***************************************************************
-//    	function to modify record of file
-//****************************************************************
 
 void modify_account(int n)
 {
@@ -258,11 +226,6 @@ void modify_account(int n)
 		cout<<"\n\n Record Not Found ";
 }
 
-//***************************************************************
-//    	function to delete record of file
-//****************************************************************
-
-
 void delete_account(int n)
 {
 	account ac;
@@ -290,10 +253,6 @@ void delete_account(int n)
 	cout<<"\n\n\tRecord Deleted ..";
 }
 
-//***************************************************************
-//    	function to display all accounts deposit list
-//****************************************************************
-
 void display_all()
 {
 	account ac;
@@ -314,10 +273,6 @@ void display_all()
 	}
 	inFile.close();
 }
-
-//***************************************************************
-//    	function to deposit and withdraw amounts
-//****************************************************************
 
 void deposit_withdraw(int n, int option)
 {
@@ -367,22 +322,11 @@ void deposit_withdraw(int n, int option)
 		cout<<"\n\n Record Not Found ";
 }
 
-
-//***************************************************************
-//    	INTRODUCTION FUNCTION
-//****************************************************************
-
-
 void intro()
 {
 	cout<<"\n\n\n\t  BANK";
 	cout<<"\n\n\tMANAGEMENT";
 	cout<<"\n\n\t  SYSTEM";
-	cout<<"\n\n\n\nMADE BY : your name";
-	cout<<"\n\nSCHOOL : your school name";
+	cout<<"\n\n\n\nMADE BY : ©️Tanmay Jaiswal";
 	cin.get();
 }
-
-//***************************************************************
-//    			END OF PROJECT
-//***************************************************************
